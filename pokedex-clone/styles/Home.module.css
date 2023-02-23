@@ -5,6 +5,7 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  background: #424242 url("https://assets.pokemon.com/static2/_ui/img/chrome/body_bg.png");
 }
 
 .description {
@@ -43,15 +44,37 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
   width: var(--max-width);
-  max-width: 100%;
+  max-width: 100%; 
+  padding: 5rem;
+  background: #fff url("https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png");
+}
+
+/* Pokemon cards */
+.p_id{
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #919191;
+    font-size: 80%;
+    padding-top: 2px;
+}
+
+.h5_name{
+    font-family: 'Nanum Gothic Bold', sans-serif;
+    color: #313131;
+    text-transform: none;
+    font-size: 145%;
+    margin-bottom: 5px;
+    text-transform: capitalize;
 }
 
 .card {
   padding: 1rem 1.2rem;
+  margin: 5rem;
   border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
+}
+
+.poke_image{
+  background: #F2F2F2;
 }
 
 .card span {
@@ -59,17 +82,39 @@
   transition: transform 200ms;
 }
 
-.card h2 {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
+/* Pagination */
+.pagination{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
 }
 
-.card p {
-  margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
+.page_link{
+  cursor: pointer; 
+}
+
+.page_item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #eaeaea;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.page_item_active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #eaeaea;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-color: red;
 }
 
 .center {
@@ -152,17 +197,6 @@
 }
 
 /* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  }
-
-  .card:hover span {
-    transform: translateX(4px);
-  }
-}
-
 @media (prefers-reduced-motion) {
   .thirteen::before {
     animation: none;
