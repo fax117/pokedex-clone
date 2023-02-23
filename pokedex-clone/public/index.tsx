@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import { GetStaticProps, NextPage } from 'next'
@@ -23,25 +22,19 @@ const Home: NextPage<{ pokemons: PokemonEntry[] }> = ({ pokemons }) =>{
         {pokemons.map((pokemon)=>{
           return (
             <div key={pokemon.entry_number}>
-              <Link href={`/Pokemon/${pokemon.entry_number}`}>
-              
               <Image
               loader={imageLoader}
               unoptimized
-              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.entry_number}.png`}
+              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.entry_number}.png`}
               alt={pokemon.pokemon_species.name}
               width="200"
               height="200"
               />
-                <p>N.° {pokemon.entry_number}</p>
-
-                <p >{pokemon.pokemon_species.name}</p>
-                </Link>
+                {pokemon.pokemon_species.name}
             </div>
             )
         })}
       </>
-      
     </div>
   )
 }
