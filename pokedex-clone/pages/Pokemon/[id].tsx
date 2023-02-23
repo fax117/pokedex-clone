@@ -1,40 +1,31 @@
 import { GetPokemonResults, Pokemon } from "@/types";
 import Image from 'next/image'
 import imageLoader from '@/imageLoader'
+import { GetServerSideProps } from "next";
+import Layout from "@/components/Layout";
+import { Card } from "@nextui-org/react";
+import styles from "../../styles/Pokemon.module.css"
 
 function PokemonPage({pokemon}: {
     pokemon: Pokemon
 }){
     return (
-        <div> 
-            <h1>{pokemon.name}</h1>
-            <Image
-              loader={imageLoader}
-              unoptimized
+        <Card > 
+            <Card.Image
               src={pokemon.sprites.front_default}
               alt={pokemon.name}
-              width="200"
-              height="200"
               />
-        </div>
+            <Card.Body>{pokemon.name}</Card.Body>
+        </Card>
     )
 }
 
-export async function getStaticPaths() {
-    const rest = await fetch("https://pokeapi.co/api/v2/pokemon/")
-    const {results}: GetPokemonResults = await rest.json();
-
-    return{
-        paths: results.map((pokemon) => {
-            return { params: { id: pokemon.url.slice(35,-1) }}
-        }),
-        fallback: false
-    }
+PokemonPage.getLayout = function getLayout(page: typeof PokemonPage){
+    return <Layout>{page}</Layout>
 }
-
-export async function getStaticProps({params} : {params: {id: string}}) {
+export const getServerSideProps: GetServerSideProps = async (context) => {
     const res = await fetch(
-        `https://pokeapi.co/api/v2/pokemon/${params.id}/`
+        `https://pokeapi.co/api/v2/pokemon/${context.query.id}/`
     );
     const pokemon = await res.json()
     return{
