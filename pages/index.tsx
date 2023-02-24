@@ -9,7 +9,6 @@ import Pokecard from '@/components/Pokecard'
 
 const inter = Inter({ subsets: ['latin'] })
 
-
 const Home: NextPage<{ pokemons: PokemonEntry[] }> = ({ pokemons }) =>{
   return (
     <div className={styles.main}>
