@@ -1,11 +1,42 @@
 .main {
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
   min-height: 100vh;
-  background: #424242 url("https://assets.pokemon.com/static2/_ui/img/chrome/body_bg.png");
+  max-width: 1280px;
+  margin: 0 auto;
+  background: #fff url("https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png");
+}
+
+.content_container{
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 auto;
+  max-width: 1024px;
+  padding-bottom: 2rem;
+}
+
+/*Navbar*/
+.nav_container{
+  display: block;
+  background: #fff;
+}
+
+.nav_h1{
+  font-family: 'Nanum Gothic ', sans-serif;
+  font-weight: lighter;
+  color: #919191;
+}
+
+/* Button */
+.load_button{
+  display: block;
+  margin: 0 auto;
+  background-color: #30a7d7;
+  color: #fff;
 }
 
 .description {
@@ -43,28 +74,21 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
+  column-gap: 2rem;
   width: var(--max-width);
-  max-width: 100%; 
+  max-width: 1024px; 
   padding: 5rem;
-  background: #fff url("https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png");
 }
 
-/* Pokemon cards */
-.p_id{
-    font-family: 'Nanum Gothic', sans-serif;
-    color: #919191;
-    font-size: 80%;
-    padding-top: 2px;
-}
-
-.h5_name{
-    font-family: 'Nanum Gothic Bold', sans-serif;
-    color: #313131;
-    text-transform: none;
-    font-size: 145%;
-    margin-bottom: 5px;
-    text-transform: capitalize;
-}
+.card_container{
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(25%, auto));
+  column-gap: 2rem;
+  width: var(--max-width);
+  max-width: 100%;
+  padding: 5rem;
+ }
 
 .card {
   padding: 1rem 1.2rem;
@@ -73,48 +97,9 @@
   border: 1px solid rgba(var(--card-border-rgb), 0);
 }
 
-.poke_image{
-  background: #F2F2F2;
-}
-
 .card span {
   display: inline-block;
   transition: transform 200ms;
-}
-
-/* Pagination */
-.pagination{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-}
-
-.page_link{
-  cursor: pointer; 
-}
-
-.page_item{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2rem;
-    height: 2rem;
-    border: 1px solid #eaeaea;
-    border-radius: 0.5rem;
-    cursor: pointer;
-}
-
-.page_item_active{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2rem;
-    height: 2rem;
-    border: 1px solid #eaeaea;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    background-color: red;
 }
 
 .center {

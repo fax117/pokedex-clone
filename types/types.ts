@@ -34,7 +34,7 @@ export interface PokemonEntry {
 export interface GetPokemonResults {
     count:    number;
     next:     string;
-    previous: null;
+    previous: string;
     results:  Result[];
 }
 

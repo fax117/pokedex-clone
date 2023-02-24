@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import { GetStaticProps, NextPage } from 'next'
-import { GetPokedexResults, GetPokemonResults, PokemonEntry } from '@/components/types/types'
+import { GetPokedexResults, GetPokemonResults, PokemonEntry } from '@/types/types'
 import imageLoader from '@/components/imageLoader'
 
 const inter = Inter({ subsets: ['latin'] })

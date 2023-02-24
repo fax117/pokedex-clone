@@ -1,0 +1,17 @@
+.main {
+    display: block;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 1280px;
+    margin: 0 auto;
+    background: #fff url("https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png");
+}
+
+.image_bg{
+    background: #f2f2f2;
+    padding: 2rem;
+    margin: 5rem;
+    border-radius: 2%;
+}
