@@ -3,8 +3,7 @@ import Link from 'next/link'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import { GetStaticProps, NextPage } from 'next'
-import { GetPokedexResults, PokemonEntry } from '@/types'
-import { Card } from "@nextui-org/react";
+import { GetPokedexResults, PokemonEntry } from '@/components/types/types'
 import Pokecard from '@/components/Pokecard'
 
 const inter = Inter({ subsets: ['latin'] })

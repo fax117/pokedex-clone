@@ -1,7 +1,7 @@
-import { GetPokemonResults, Pokemon } from "@/types";
+import { GetPokemonResults, Pokemon } from "@/components/types/types";
 import Head from 'next/head'
 import Image from 'next/image'
-import imageLoader from '@/imageLoader'
+import imageLoader from '@/components/imageLoader'
 import { GetServerSideProps } from "next";
 import Layout from "@/components/Layout";
 import { Card } from "@nextui-org/react";
