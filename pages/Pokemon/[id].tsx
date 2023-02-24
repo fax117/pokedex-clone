@@ -30,7 +30,7 @@ function PokemonPage({pokemon}: {
     )
 }
 
-PokemonPage.getLayout = function getLayout(page: typeof PokemonPage){
+PokemonPage.getLayout = function getLayout(page: any){
     return <Layout>{page}</Layout>
 }
 export const getServerSideProps: GetServerSideProps = async (context) => {
