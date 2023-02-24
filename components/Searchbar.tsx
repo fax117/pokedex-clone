@@ -12,7 +12,7 @@ function Searchbar (){
             </Row>
             <Row>
                 <Col>
-                    <Input clearable bordered theme="light"/>
+                    <Input clearable bordered/>
                 </Col>
                 <Col>
                     <Card> 

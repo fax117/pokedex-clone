@@ -1,13 +1,15 @@
 /* Pokemon cards */
-.card_body{
-    display: block;
-}
-
 .poke_card {
     padding: 2rem;
-    margin: 1rem;
+    margin-bottom: 1rem;
     border-radius: var(--border-radius);
     background-color: #FFFFFF;
+    display: block;
+    overflow: hidden;
+}
+
+.card_body{
+    display: block;
 }
 
 .poke_image {

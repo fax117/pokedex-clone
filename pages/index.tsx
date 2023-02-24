@@ -7,12 +7,18 @@ import Searchbar from '@/components/Searchbar'
 import {Container, Button, Text, Grid} from "@nextui-org/react";
 import InfiniteScroll from 'react-infinite-scroll-component'
 import { useState } from 'react'
+import Link from 'next/link'
 
 const Home: NextPage<{ pokemons: Result[], nextQuery: string }> = ({ pokemons, nextQuery }) =>{
 
   const [pokemen, setPokemons] = useState(pokemons);
   const [newQuery, setNextQuery] = useState(nextQuery);
   const [hasMore, setHasMore] = useState(false);
+
+  const pressButton = () => {
+    getMorePokemons
+    setHasMore(true)
+  }
 
   const getMorePokemons = async () => {
     const res = await fetch(`${newQuery}`);
@@ -38,7 +44,9 @@ const Home: NextPage<{ pokemons: Result[], nextQuery: string }> = ({ pokemons, n
 
       <Container className={styles.content_container}>
         <nav className={styles.nav_container}>
-          <h1 className={styles.nav_h1}>Pokédex</h1>
+          <Link href="/">
+            <h1 className={styles.nav_h1}>Pokédex</h1>
+          </Link>
         </nav>
         
         <Grid.Container justify="center">
@@ -61,7 +69,7 @@ const Home: NextPage<{ pokemons: Result[], nextQuery: string }> = ({ pokemons, n
 
         <Button 
           className={styles.load_button}
-          onPress={setHasMore}>
+          onPress={pressButton}>
           <Text color="white">Cargar más Pokémon</Text>
         </Button>
 
