@@ -2,6 +2,7 @@
   "name": "pokedex-clone",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ffuentes.me",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
