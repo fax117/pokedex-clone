@@ -17,8 +17,14 @@ La idea es usar Next.JS con Typescript. También estoy utilizando Git como contr
 ### A futuro
 
 Genuinamente me interesó bastante este proyecto entonces probablemente lo voy a retomar en un futuro.
-Más que nada lo que más me gustaría implementar bien es la búsqueda de los Pokemones y el infinite scroll de la página.
-Creo que por el tipo de API que usé me disparé en el pie yo solo porque maneja los Pokemon de una manera diferente a lo que vi de otros tutoriales y librerías de paginación.
+
+Hubo unas cuantas cosas que no acabaron como quería.
+
+1. La paginación sí sirve, sin embargo, rompe el grid. Necesito ver si es el componente que descargue que lo rompe o si hay alguna otra manera en que pueda regresarlo a ser un grid pero sin el Infinite Scroll.
+
+2. La API me quedó mucho a deber. Hay varias cosas que no puedo obtener a diferencia de lo que hay en la página original.
+
+3. Me gustaría sí poder implementar un sistema de búsqueda como el que ellos han puesto.
 
 ## -----------------------------------
 
