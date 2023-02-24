@@ -5,12 +5,12 @@ import styles from '@/styles/Home.module.css'
 import { GetStaticProps, NextPage } from 'next'
 import { GetPokedexResults, PokemonEntry } from '@/types'
 import { Card } from "@nextui-org/react";
+import Pokecard from '@/components/Pokecard'
 
 const inter = Inter({ subsets: ['latin'] })
 
 
 const Home: NextPage<{ pokemons: PokemonEntry[] }> = ({ pokemons }) =>{
-
   return (
     <div className={styles.main}>
       <Head>
@@ -21,26 +21,10 @@ const Home: NextPage<{ pokemons: PokemonEntry[] }> = ({ pokemons }) =>{
       <div className={styles.grid}>
         {pokemons.map((pokemon)=>{
             return (
-            <>
-              <Link href={`/Pokemon/${pokemon.entry_number}`}>
-                <Card 
-                className={styles.card} 
-                isHoverable
-                key={pokemon.entry_number}>
-                  <Card.Image
-                  src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.entry_number}.png`}
-                  alt={pokemon.pokemon_species.name}
-                  width="200"
-                  height="200"
-                  className={styles.poke_image}
-                  />
-                  <Card.Body>
-                    <p className={styles.p_id}>N.° {pokemon.entry_number}</p>
-                    <p className={styles.h5_name}>{pokemon.pokemon_species.name}</p>
-                  </Card.Body>
-                </Card>
-              </Link>
-            </>
+              <Pokecard 
+              key={pokemon.entry_number}
+              id={pokemon.entry_number}
+              name={pokemon.pokemon_species.name} />
             )
         })}
       </div>
