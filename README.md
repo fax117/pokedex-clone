@@ -1,3 +1,27 @@
+# Pokédex Clone
+
+Esto es un micro proyecto de frontend que me sirvió a mí para aprender a usar NextJS.
+
+### Objetivo
+
+El objetivo es recrear una réplica de la página del [Pokédex Nacional](https://www.pokemon.com/el/pokedex/).
+
+### API
+
+Para la realización de este proyectito estoy usando la [PokeApi](https://pokeapi.co/)
+
+### Stack
+
+La idea es usar Next.JS con Typescript. También estoy utilizando Git como control de versión y la idea es poner esto en Github Pages si es que mi domino personal decide no tener problemas.
+
+### A futuro
+
+Genuinamente me interesó bastante este proyecto entonces probablemente lo voy a retomar en un futuro.
+Más que nada lo que más me gustaría implementar bien es la búsqueda de los Pokemones y el infinite scroll de la página.
+Creo que por el tipo de API que usé me disparé en el pie yo solo porque maneja los Pokemon de una manera diferente a lo que vi de otros tutoriales y librerías de paginación.
+
+## -----------------------------------
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
