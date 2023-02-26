@@ -1,4 +1,4 @@
-import { Pokemon } from "@/types/types";
+import { GetPokemonResults, Pokemon } from "@/types/types";
 import Head from 'next/head'
 import { GetServerSideProps } from "next";
 import Layout from "@/components/Layout";
@@ -103,9 +103,21 @@ PokemonPage.getLayout = function getLayout(page: any){
     return <Layout>{page}</Layout>
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export async function getStaticPaths() {
+    const rest = await fetch("https://pokeapi.co/api/v2/pokemon/")
+    const {results}: GetPokemonResults = await rest.json();
+
+    return{
+        paths: results.map((pokemon) => {
+            return { params: { id: pokemon.url.slice(34,-1) }}
+        }),
+        fallback: false
+    }
+}
+
+export async function getStaticProps({params} : {params: {id: string}}) {
     const res = await fetch(
-        `https://pokeapi.co/api/v2/pokemon/${context.query.id}/`
+        `https://pokeapi.co/api/v2/pokemon/${params.id}/`
     );
     const pokemon = await res.json()
     return{
@@ -114,5 +126,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         }
     }
 }
+ 
 
 export default PokemonPage;

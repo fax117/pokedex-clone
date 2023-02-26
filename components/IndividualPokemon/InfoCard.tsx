@@ -17,7 +17,7 @@ function InfoCard ({height, weight, sex}: {height:number, weight: number, sex:st
                         <Text>{height}</Text>
                     </Col>
                     <Col>
-                        <Text>Algo debería de ir aquí</Text>
+                        <Text>Lorem Ipsum</Text>
                     </Col>
                 </Row>
                 <Card.Divider />
@@ -34,7 +34,7 @@ function InfoCard ({height, weight, sex}: {height:number, weight: number, sex:st
                         <Text>{weight}</Text>
                     </Col>
                     <Col>
-                        <Text>Algo debería de ir aquí</Text>
+                        <Text>Lorem Ipsum</Text>
                     </Col>
                 </Row>
                 <Card.Divider />
