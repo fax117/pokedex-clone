@@ -20,11 +20,11 @@ Genuinamente me interesó bastante este proyecto entonces probablemente lo voy a
 
 Hubo unas cuantas cosas que no acabaron como quería.
 
-1. La paginación sí sirve, sin embargo, rompe el grid. Necesito ver si es el componente que descargue que lo rompe o si hay alguna otra manera en que pueda regresarlo a ser un grid pero sin el Infinite Scroll.
+1. La API me quedó mucho a deber. Hay varias cosas que no puedo obtener a diferencia de lo que hay en la página original.
 
-2. La API me quedó mucho a deber. Hay varias cosas que no puedo obtener a diferencia de lo que hay en la página original.
+2. Me gustaría sí poder implementar un sistema de búsqueda como el que ellos han puesto.
 
-3. Me gustaría sí poder implementar un sistema de búsqueda como el que ellos han puesto.
+3. Poder acabar de hacer bien la página individual de los Pokémon.
 
 ## -----------------------------------
 
