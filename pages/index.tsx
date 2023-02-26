@@ -55,13 +55,14 @@ const Home: NextPage<{ pokemons: Result[], nextQuery: string }> = ({ pokemons, n
             next={getMorePokemons}
             hasMore={hasMore}
             loader={<h3> Loading...</h3>}
+            className={styles.grid}
           > 
             {pokemen.map((pokemon: Result)=>{
               return (
-                  <Pokecard 
-                    key={getPokeId(pokemon)}
-                    id={getPokeId(pokemon)}
-                    name={pokemon.name} />
+                    <Pokecard 
+                      key={getPokeId(pokemon)}
+                      id={getPokeId(pokemon)}
+                      name={pokemon.name} />
               )
             })}
           </InfiniteScroll>

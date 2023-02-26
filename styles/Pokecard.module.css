@@ -1,6 +1,5 @@
 /* Pokemon cards */
 .poke_card {
-    padding: 2rem;
     margin-bottom: 1rem;
     border-radius: var(--border-radius);
     background-color: #FFFFFF;
